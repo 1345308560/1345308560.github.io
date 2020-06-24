@@ -6,13 +6,14 @@
     <content><![CDATA[<h2 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h2><h4 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h4><p>由同类型<strong>数据元素</strong>构成的<strong>有序序列</strong>的线性结构。</p>
 <h4 id="基本操作："><a href="#基本操作：" class="headerlink" title="基本操作："></a>基本操作：</h4><a id="more"></a>
 <p>1.初始化<br>2.根据位置查找元素<br>3.查找某个元素的位置<br>4.插入<br>5.删除<br>6.表长  </p>
-<h4 id="数组："><a href="#数组：" class="headerlink" title="数组："></a>数组：</h4><p><strong>定义：</strong></p>
+<h2 id="普通线性表"><a href="#普通线性表" class="headerlink" title="普通线性表"></a>普通线性表</h2><h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><p><strong>基本框架：</strong></p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> DataType;                <span class="comment">//数据类型</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">List</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">        DataType *p;                 <span class="comment">//指向数据的指针</span></span><br><span class="line">        <span class="keyword">int</span> length;                  <span class="comment">//数组长度</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        List(<span class="keyword">int</span> N);                 <span class="comment">//初始化，生成N个数据成员的表</span></span><br><span class="line">        <span class="function">DataType <span class="title">Find</span><span class="params">(<span class="keyword">int</span> <span class="built_in">position</span>)</span></span>; <span class="comment">//根据位置查找元素</span></span><br><span class="line">        <span class="function"><span class="keyword">int</span> <span class="title">Search</span><span class="params">(DataType data)</span></span>;   <span class="comment">//查找某个元素的位置</span></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">Insert</span><span class="params">(DataType)</span></span>;       <span class="comment">//插入</span></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">Deleate</span><span class="params">(<span class="keyword">int</span> <span class="built_in">position</span>)</span></span>;  <span class="comment">//删除</span></span><br><span class="line">        <span class="function"><span class="keyword">int</span> <span class="title">ListLength</span><span class="params">()</span></span>;            <span class="comment">//表长</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>1.初始化:</strong></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">List::List(<span class="keyword">int</span> N)</span><br><span class="line">&#123;</span><br><span class="line">    p=(DataType*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(DataType)*N);<span class="comment">//申请空间</span></span><br><span class="line">    length=N;                               <span class="comment">//表长</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h4><p><strong>基本框架：</strong></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">typrdef <span class="keyword">int</span> DataType;      <span class="comment">//定义数据类型</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">node</span>* <span class="title">List</span>;</span> <span class="comment">//节点指针</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>                //节点</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    DataType Data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span>* <span class="title">Next</span>;</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LinkedList</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">        List L;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        LinkedList(<span class="keyword">int</span> N);           <span class="comment">//初始化</span></span><br><span class="line">        <span class="function">DataType <span class="title">Find</span><span class="params">(<span class="keyword">int</span> <span class="built_in">position</span>)</span></span>; <span class="comment">//根据位置查找元素</span></span><br><span class="line">        <span class="function"><span class="keyword">int</span> <span class="title">Search</span><span class="params">(DataType data)</span></span>;   <span class="comment">//查找某个元素的位置</span></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">Insert</span><span class="params">(DataType)</span></span>;       <span class="comment">//插入</span></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">Deleate</span><span class="params">(<span class="keyword">int</span> <span class="built_in">position</span>)</span></span>;  <span class="comment">//删除</span></span><br><span class="line">        <span class="function"><span class="keyword">int</span> <span class="title">ListLength</span><span class="params">()</span></span>;            <span class="comment">//表长</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-<h4 id="链表："><a href="#链表：" class="headerlink" title="链表："></a>链表：</h4><h2 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h2><h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2>]]></content>
+<h2 id="限制线性表"><a href="#限制线性表" class="headerlink" title="限制线性表"></a>限制线性表</h2><h4 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h4><hr>
+<h4 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h4>]]></content>
       <categories>
         <category>Computer Science 计算机科学</category>
         <category>Data Structure 数据结构</category>
@@ -79,6 +80,119 @@
         <category>Reading Notes 读书笔记</category>
         <category>古文观止</category>
         <category>左传</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>大学物理及格宝典</title>
+    <url>/2020/06/24/%E5%A4%A7%E4%B8%80%E4%B8%8B%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/</url>
+    <content><![CDATA[<h2 id="考试说明"><a href="#考试说明" class="headerlink" title="考试说明"></a>考试说明</h2><p><strong>1.考试范围：</strong><br>物理学上册+物理学下册（相对论）<br><strong>2.考试题型：</strong>   </p>
+<table>
+<thead>
+<tr>
+<th>题型</th>
+<th>数量</th>
+<th>分值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>问答题</td>
+<td>8</td>
+<td>40</td>
+</tr>
+<tr>
+<td>作图题</td>
+<td>1</td>
+<td>10</td>
+</tr>
+<tr>
+<td>计算题</td>
+<td>5</td>
+<td>50</td>
+</tr>
+</tbody></table>
+<p><strong>3.考试要求：</strong><br>&emsp;&emsp;考试时间结束后10分钟时间内，学生将书面答题内容使用手机拍照并上传到群管理员，每个班级一个监考老师，答卷命名格式为“<strong>学号-姓名-课程名称-任课教师姓名-试卷页码</strong>”；同一考生多张答卷时，将答卷放入文件夹并打包称压缩包提交，文件夹命名格式为“<strong>学号-姓名-课程名称-任课教师姓名-试卷总页数</strong>”；答卷以<strong>照片或PDF</strong>格式提交，采用<strong>竖版</strong>模式，应保证试卷电子版清晰可辨。<br><strong>4.考试时间：</strong><br><font color=red>6.28 上午8:30-10:30</font></p>
+<a id="more"></a>    
+<p><img src="/images/%E5%8F%8A%E6%A0%BC%E4%B8%87%E5%B2%81.jpg" alt="1"></p>
+<h2 id="考点"><a href="#考点" class="headerlink" title="考点"></a>考点</h2><h4 id="第一章-质点运动学"><a href="#第一章-质点运动学" class="headerlink" title="第一章 质点运动学"></a>第一章 质点运动学</h4><p><strong>1.知识点：</strong><br>①描述质点运动的四个物理量：位矢r，位移∆r，速度υ，加速度a<br>②质点运动学<br>③圆周运动<br><strong>2.考点：</strong><br>①质点运动学：<br>已知a(υ)、a(r)求相关物理量（一般用变量替换）<br><strong>例题：</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>书名</th>
+<th>页数</th>
+<th>题号</th>
+<th>推荐掌握程度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>大学物理辅导与练习</td>
+<td>3</td>
+<td>例1-3</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>大学物理辅导与练习</td>
+<td>4</td>
+<td>3</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>物理学（上册）</td>
+<td>9</td>
+<td>例2</td>
+<td>90%</td>
+</tr>
+</tbody></table>
+<p>②圆周运动：<br><strong>例题：</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>书名</th>
+<th>页数</th>
+<th>题号</th>
+<th>推荐掌握程度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>大学物理辅导与练习</td>
+<td>3</td>
+<td>例1-4</td>
+<td>100%</td>
+</tr>
+</tbody></table>
+<hr>
+<h4 id="第二章-牛顿运动学"><a href="#第二章-牛顿运动学" class="headerlink" title="第二章 牛顿运动学"></a>第二章 牛顿运动学</h4><p><strong>1.知识点</strong><br>①牛顿运动定律<br>②常见力（万有引力、弹性力、摩擦力）<br><strong>2.考点：</strong><br>已知力，求运动。如果涉及两个以上质点，采用“隔离体法”。<br><strong>例题：</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>书名</th>
+<th>页数</th>
+<th>题号</th>
+<th>推荐掌握程度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>物理学（上册）</td>
+<td>40</td>
+<td>例1</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>物理学（上册）</td>
+<td>45</td>
+<td>例6</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>大学物理辅导与练习</td>
+<td>11</td>
+<td>例2-3</td>
+<td>100%</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>其他</category>
+        <category>考试资料</category>
       </categories>
   </entry>
 </search>
