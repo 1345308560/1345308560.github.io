@@ -20,6 +20,98 @@
       </categories>
   </entry>
   <entry>
+    <title>大学物理及格宝典</title>
+    <url>/2020/06/24/%E5%A4%A7%E4%B8%80%E4%B8%8B%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/</url>
+    <content><![CDATA[<h2 id="考试说明"><a href="#考试说明" class="headerlink" title="考试说明"></a>考试说明</h2><p><strong>1.考试范围：</strong><br>物理学上册+物理学下册（相对论）<br><strong>2.考试题型：</strong>   </p>
+<table>
+<thead>
+<tr>
+<th>题型</th>
+<th>数量</th>
+<th>分值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>问答题</td>
+<td>8</td>
+<td>40</td>
+</tr>
+<tr>
+<td>作图题</td>
+<td>1</td>
+<td>10</td>
+</tr>
+<tr>
+<td>计算题</td>
+<td>5</td>
+<td>50</td>
+</tr>
+</tbody></table>
+<p><strong>3.考试要求：</strong><br>&emsp;&emsp;考试时间结束后10分钟时间内，学生将书面答题内容使用手机拍照并上传到群管理员，每个班级一个监考老师，答卷命名格式为“<strong>学号-姓名-课程名称-任课教师姓名-试卷页码</strong>”；同一考生多张答卷时，将答卷放入文件夹并打包称压缩包提交，文件夹命名格式为“<strong>学号-姓名-课程名称-任课教师姓名-试卷总页数</strong>”；答卷以<strong>照片或PDF</strong>格式提交，采用<strong>竖版</strong>模式，应保证试卷电子版清晰可辨。<br><strong>4.考试时间：</strong><br><font color=red>6.28 上午8:30-10:30</font></p>
+<a id="more"></a>    
+<p><img src="/images/%E5%8F%8A%E6%A0%BC%E4%B8%87%E5%B2%81.jpg" alt="1"></p>
+<h2 id="考点"><a href="#考点" class="headerlink" title="考点"></a>考点</h2><h4 id="第一章-质点运动学"><a href="#第一章-质点运动学" class="headerlink" title="第一章 质点运动学"></a>第一章 质点运动学</h4><p><strong>1.知识点：</strong><br>①描述质点运动的四个物理量：位矢r，位移∆r，速度υ，加速度a<br>②质点运动学<br>③圆周运动<br><strong>2.考点：</strong><br>①质点运动学：<br>已知a(υ)、a(r)求相关物理量（一般用变量替换）<br><strong>例题：</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>书名</th>
+<th>页数</th>
+<th>题号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>大学物理辅导与练习</td>
+<td>3</td>
+<td>例1-3</td>
+</tr>
+<tr>
+<td>大学物理辅导与练习</td>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>物理学（上册）</td>
+<td>9</td>
+<td>例2</td>
+</tr>
+</tbody></table>
+<p>②圆周运动：<br><strong>例题：</strong>  </p>
+<p>|书名|页数|题号<br>|-|-|-|-|<br>大学物理辅导与练习|3|例1-4</p>
+<hr>
+<h4 id="第二章-牛顿运动学"><a href="#第二章-牛顿运动学" class="headerlink" title="第二章 牛顿运动学"></a>第二章 牛顿运动学</h4><p><strong>1.知识点</strong><br>①牛顿运动定律<br>②常见力（万有引力、弹性力、摩擦力）<br><strong>2.考点：</strong><br>已知力，求运动。如果涉及两个以上质点，采用“隔离体法”。<br><strong>例题：</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>书名</th>
+<th>页数</th>
+<th>题号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>物理学（上册）</td>
+<td>40</td>
+<td>例1</td>
+</tr>
+<tr>
+<td>物理学（上册）</td>
+<td>45</td>
+<td>例6</td>
+</tr>
+<tr>
+<td>大学物理辅导与练习</td>
+<td>11</td>
+<td>例2-3</td>
+</tr>
+</tbody></table>
+<hr>
+<h4 id="第三章-动量守恒定律和能量守恒定律"><a href="#第三章-动量守恒定律和能量守恒定律" class="headerlink" title="第三章 动量守恒定律和能量守恒定律"></a>第三章 动量守恒定律和能量守恒定律</h4><p><strong>1.知识点</strong><br>①冲量、动量<br>②功   </p>
+]]></content>
+      <categories>
+        <category>其他</category>
+        <category>大一下考试资料</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Data Structure-Introduction 简介</title>
     <url>/2020/06/22/DataStructure1/</url>
     <content><![CDATA[<h2 id="什么是数据结构"><a href="#什么是数据结构" class="headerlink" title="什么是数据结构"></a>什么是数据结构</h2><p>&emsp;&emsp;在计算机科学中，<strong>数据结构</strong>（Data Structure）是计算机中存储、组织数据的方式。它研究的是数据的<strong>逻辑结构</strong>和数据的<strong>物理结构</strong>以及它们之间的相互关系，并对这种结构定义相适应的运算，设计出相应的算法，并确保经过这些运算以后所得到的新结构仍保持原来的结构类型。</p>
@@ -37,6 +129,177 @@
       <categories>
         <category>Computer Science 计算机科学</category>
         <category>Data Structure 数据结构</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>高等代数计算题汇总</title>
+    <url>/2020/06/25/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0%E8%AE%A1%E7%AE%97%E9%A2%98%E6%B1%87%E6%80%BB/</url>
+    <content><![CDATA[<p><img src="/images/%E7%BB%9D%E4%B8%8D%E6%8C%82%E7%A7%91.jpg" alt="1"></p>
+<a id="more"></a>  
+
+<h2 id="第五章、二次型"><a href="#第五章、二次型" class="headerlink" title="第五章、二次型"></a>第五章、二次型</h2><p>题型：<strong>化二次型为标准型（规范型）</strong><br>方法：<br>①配方法<br>②初等变换法<br>例题：  </p>
+<table>
+<thead>
+<tr>
+<th>来源</th>
+<th>页数</th>
+<th>题号</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>教材</td>
+<td>157</td>
+<td>1</td>
+<td>无</td>
+</tr>
+<tr>
+<td>教材</td>
+<td>158</td>
+<td>1</td>
+<td>无</td>
+</tr>
+<tr>
+<td>习题课</td>
+<td>10</td>
+<td>1、2、3</td>
+<td>无</td>
+</tr>
+<tr>
+<td>单元测试</td>
+<td>2</td>
+<td>二、三</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<!-- more -->  
+<p>题型：<strong>判断二次型是否正定</strong><br>方法：<br>①顺序主子式<br>②化为标准型（规范型）<br>例题：  </p>
+<table>
+<thead>
+<tr>
+<th>来源</th>
+<th>页数</th>
+<th>题号</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>教材</td>
+<td>157</td>
+<td>7</td>
+<td>无</td>
+</tr>
+<tr>
+<td>教材</td>
+<td>158</td>
+<td>8</td>
+<td>无</td>
+</tr>
+<tr>
+<td>习题课</td>
+<td>10</td>
+<td>4</td>
+<td>无</td>
+</tr>
+<tr>
+<td>单元测试</td>
+<td>2</td>
+<td>四</td>
+<td>与上题类似</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="第六章、线性空间"><a href="#第六章、线性空间" class="headerlink" title="第六章、线性空间"></a>第六章、线性空间</h2><p>题型：<strong>求过渡矩阵、基下坐标</strong><br>方法：<br>直接计算<br>例题：  </p>
+<table>
+<thead>
+<tr>
+<th>来源</th>
+<th>页数</th>
+<th>题号</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>教材</td>
+<td>182</td>
+<td>9、10</td>
+<td>无</td>
+</tr>
+<tr>
+<td>习题课一</td>
+<td>7</td>
+<td>三（1）</td>
+<td>无</td>
+</tr>
+<tr>
+<td>单元测试</td>
+<td>4</td>
+<td>五</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>题型：<strong>基、维数</strong><br>方法：<br>维数：矩阵的秩<br>基：极大线性无关组<br>写出矩阵，行约化  0<br>例题：  </p>
+<table>
+<thead>
+<tr>
+<th>来源</th>
+<th>页数</th>
+<th>题号</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>教材</td>
+<td>183</td>
+<td>16</td>
+<td>无</td>
+</tr>
+<tr>
+<td>教材</td>
+<td>183</td>
+<td>17</td>
+<td>无</td>
+</tr>
+<tr>
+<td>单元测试</td>
+<td>2</td>
+<td>三</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>题型：<strong>交（和）的基、维数</strong><br>方法：<br>维数公式：维 (交) + 维 (和) = 维 (V1) + 维 (V2)<br>和：L (a1, a2) + L (b1, b2) = L (a1, a2, b1, b2)<br>交：设a是交空间中的向量，a= x1<em>a1 + x2</em>a2 = y1<em>b1 + y2</em>b2，解方程，求出向量<br>例题：  </p>
+<table>
+<thead>
+<tr>
+<th>来源</th>
+<th>页数</th>
+<th>题号</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>教材</td>
+<td>183</td>
+<td>18</td>
+<td>无</td>
+</tr>
+<tr>
+<td>习题课二</td>
+<td>15</td>
+<td>三（1）</td>
+<td>无</td>
+</tr>
+<tr>
+<td>单元测试</td>
+<td>3</td>
+<td>四</td>
+<td>无</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>其他</category>
+        <category>大一下考试资料</category>
       </categories>
   </entry>
   <entry>
@@ -80,119 +343,6 @@
         <category>Reading Notes 读书笔记</category>
         <category>古文观止</category>
         <category>左传</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>大学物理及格宝典</title>
-    <url>/2020/06/24/%E5%A4%A7%E4%B8%80%E4%B8%8B%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/</url>
-    <content><![CDATA[<h2 id="考试说明"><a href="#考试说明" class="headerlink" title="考试说明"></a>考试说明</h2><p><strong>1.考试范围：</strong><br>物理学上册+物理学下册（相对论）<br><strong>2.考试题型：</strong>   </p>
-<table>
-<thead>
-<tr>
-<th>题型</th>
-<th>数量</th>
-<th>分值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>问答题</td>
-<td>8</td>
-<td>40</td>
-</tr>
-<tr>
-<td>作图题</td>
-<td>1</td>
-<td>10</td>
-</tr>
-<tr>
-<td>计算题</td>
-<td>5</td>
-<td>50</td>
-</tr>
-</tbody></table>
-<p><strong>3.考试要求：</strong><br>&emsp;&emsp;考试时间结束后10分钟时间内，学生将书面答题内容使用手机拍照并上传到群管理员，每个班级一个监考老师，答卷命名格式为“<strong>学号-姓名-课程名称-任课教师姓名-试卷页码</strong>”；同一考生多张答卷时，将答卷放入文件夹并打包称压缩包提交，文件夹命名格式为“<strong>学号-姓名-课程名称-任课教师姓名-试卷总页数</strong>”；答卷以<strong>照片或PDF</strong>格式提交，采用<strong>竖版</strong>模式，应保证试卷电子版清晰可辨。<br><strong>4.考试时间：</strong><br><font color=red>6.28 上午8:30-10:30</font></p>
-<a id="more"></a>    
-<p><img src="/images/%E5%8F%8A%E6%A0%BC%E4%B8%87%E5%B2%81.jpg" alt="1"></p>
-<h2 id="考点"><a href="#考点" class="headerlink" title="考点"></a>考点</h2><h4 id="第一章-质点运动学"><a href="#第一章-质点运动学" class="headerlink" title="第一章 质点运动学"></a>第一章 质点运动学</h4><p><strong>1.知识点：</strong><br>①描述质点运动的四个物理量：位矢r，位移∆r，速度υ，加速度a<br>②质点运动学<br>③圆周运动<br><strong>2.考点：</strong><br>①质点运动学：<br>已知a(υ)、a(r)求相关物理量（一般用变量替换）<br><strong>例题：</strong>  </p>
-<table>
-<thead>
-<tr>
-<th>书名</th>
-<th>页数</th>
-<th>题号</th>
-<th>推荐掌握程度</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>大学物理辅导与练习</td>
-<td>3</td>
-<td>例1-3</td>
-<td>100%</td>
-</tr>
-<tr>
-<td>大学物理辅导与练习</td>
-<td>4</td>
-<td>3</td>
-<td>100%</td>
-</tr>
-<tr>
-<td>物理学（上册）</td>
-<td>9</td>
-<td>例2</td>
-<td>90%</td>
-</tr>
-</tbody></table>
-<p>②圆周运动：<br><strong>例题：</strong>  </p>
-<table>
-<thead>
-<tr>
-<th>书名</th>
-<th>页数</th>
-<th>题号</th>
-<th>推荐掌握程度</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>大学物理辅导与练习</td>
-<td>3</td>
-<td>例1-4</td>
-<td>100%</td>
-</tr>
-</tbody></table>
-<hr>
-<h4 id="第二章-牛顿运动学"><a href="#第二章-牛顿运动学" class="headerlink" title="第二章 牛顿运动学"></a>第二章 牛顿运动学</h4><p><strong>1.知识点</strong><br>①牛顿运动定律<br>②常见力（万有引力、弹性力、摩擦力）<br><strong>2.考点：</strong><br>已知力，求运动。如果涉及两个以上质点，采用“隔离体法”。<br><strong>例题：</strong>  </p>
-<table>
-<thead>
-<tr>
-<th>书名</th>
-<th>页数</th>
-<th>题号</th>
-<th>推荐掌握程度</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>物理学（上册）</td>
-<td>40</td>
-<td>例1</td>
-<td>100%</td>
-</tr>
-<tr>
-<td>物理学（上册）</td>
-<td>45</td>
-<td>例6</td>
-<td>100%</td>
-</tr>
-<tr>
-<td>大学物理辅导与练习</td>
-<td>11</td>
-<td>例2-3</td>
-<td>100%</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>其他</category>
-        <category>考试资料</category>
       </categories>
   </entry>
 </search>
