@@ -45,66 +45,23 @@
       </categories>
   </entry>
   <entry>
-    <title>Data Structure-Introduction 简介</title>
-    <url>/2020/06/22/DataStructure1/</url>
-    <content><![CDATA[<h2 id="什么是数据结构"><a href="#什么是数据结构" class="headerlink" title="什么是数据结构"></a>什么是数据结构</h2><p>&emsp;&emsp;在计算机科学中，<strong>数据结构</strong>（Data Structure）是计算机中存储、组织数据的方式。它研究的是数据的<strong>逻辑结构</strong>和数据的<strong>物理结构</strong>以及它们之间的相互关系，并对这种结构定义相适应的运算，设计出相应的算法，并确保经过这些运算以后所得到的新结构仍保持原来的结构类型。</p>
-<a id="more"></a>
-<h2 id="常用数据结构"><a href="#常用数据结构" class="headerlink" title="常用数据结构"></a>常用数据结构</h2><ul>
-<li>数组（Arry）</li>
-<li>队列（Queue）</li>
-<li>链表（Linked List）</li>
-<li>栈（Stack）</li>
-<li>树（Tree）</li>
-<li>图（Graph）</li>
-<li>堆（Heap）</li>
-</ul>
+    <title>编程题1</title>
+    <url>/2020/06/26/%E7%BC%96%E7%A8%8B%E9%A2%981/</url>
+    <content><![CDATA[<h2 id="题目来源"><a href="#题目来源" class="headerlink" title="题目来源"></a>题目来源</h2><p>2013年PAT春季考试真题  </p>
+<a id="more"></a>   
+
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>Given a stack which can keep M numbers at most. Push N numbers in the order of 1, 2, 3, …, N and pop randomly. You are supposed to tell if a given sequence of numbers is a possible pop sequence of the stack. For example, if M is 5 and N is 7, we can obtain 1, 2, 3, 4, 5, 6, 7 from the stack, but not 3, 2, 1, 7, 5, 6, 4.  </p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, the first line contains 3 numbers (all no more than 1000): M (the maximum capacity of the stack), N (the length of push sequence), and K (the number of pop sequences to be checked). Then K lines follow, each contains a pop sequence of N numbers. All the numbers in a line are separated by a space.  </p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each pop sequence, print in one line “YES” if it is indeed a possible pop sequence of the stack, or “NO” if not.  </p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">5 7 5</span><br><span class="line">1 2 3 4 5 6 7</span><br><span class="line">3 2 1 7 5 6 4</span><br><span class="line">7 6 5 4 3 2 1</span><br><span class="line">5 6 4 3 7 2 1</span><br><span class="line">1 7 6 5 4 3 2</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">YES</span><br><span class="line">NO</span><br><span class="line">NO</span><br><span class="line">YES</span><br><span class="line">NO</span><br></pre></td></tr></table></figure>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>&emsp;&emsp;判断一个数列是不是上述操作出来的结果，我研究了一会，也没正确的数列有什么规律…既然计算机计算能力强，那就干脆一个一个模拟好了。一个循环结构，把原始的数列压入堆栈，然后从栈中弹出，和目标数列对比。如果一样，那就对比下一个，直到全部对比完成。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h3 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Stack</span>         //栈类</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span>* p;         <span class="comment">//指向元素的指针</span></span><br><span class="line">    <span class="keyword">int</span> <span class="built_in">max</span>;        <span class="comment">//栈的容量</span></span><br><span class="line">    <span class="keyword">int</span> topp;       <span class="comment">//记录顶部位置</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Stack(<span class="keyword">int</span> N);   <span class="comment">//根据题目所给栈大小生成栈</span></span><br><span class="line">                    <span class="comment">//为了题目计算方便，我这里把pop函数拆成两个（pop、top）</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">top</span><span class="params">()</span></span>;      <span class="comment">//返回栈顶的元素</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">pop</span><span class="params">()</span></span>;     <span class="comment">//把栈顶元素弹出</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">in</span><span class="params">(<span class="keyword">int</span> a)</span></span>; <span class="comment">//压入元素</span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">empty</span><span class="params">()</span></span>;   <span class="comment">//栈是否空</span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">full</span><span class="params">()</span></span>;    <span class="comment">//栈是否满</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">asset</span><span class="params">(<span class="keyword">int</span>* original,<span class="keyword">int</span>* target,Stack S)</span></span>; <span class="comment">//评估函数，是否满足条件</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span>* original,* target;                                <span class="comment">//原始列、目标列</span></span><br><span class="line">    <span class="keyword">bool</span>* output;                                          <span class="comment">//记录每组目标列的正确与否</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> StackSize,SequenceLength,Lines;                    <span class="comment">//栈的大小、列长、行数</span></span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;StackSize&gt;&gt;SequenceLength&gt;&gt;Lines;</span><br><span class="line"></span><br><span class="line">    original=(<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*(SequenceLength+<span class="number">1</span>)); <span class="comment">//初始化</span></span><br><span class="line">    target=(<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*(SequenceLength+<span class="number">1</span>));</span><br><span class="line">    output=(<span class="keyword">bool</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">bool</span>)*SequenceLength);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;SequenceLength;i++) *(original+i)=i+<span class="number">1</span>;        </span><br><span class="line">    *(original+SequenceLength)=<span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">Stack <span class="title">S</span><span class="params">(StackSize)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;Lines;i++)                              <span class="comment">//输入每个目标列的元素</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;SequenceLength;j++) <span class="built_in">cin</span>&gt;&gt;*(target+j);   </span><br><span class="line">        *(target+SequenceLength)=<span class="number">-1</span>;</span><br><span class="line">        *(output+i)=asset(original,target,S);              <span class="comment">//判断             </span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;Lines;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (*(output+i)==<span class="literal">true</span>)<span class="built_in">cout</span>&lt;&lt;<span class="string">"YES"</span>&lt;&lt;<span class="built_in">endl</span>;           <span class="comment">//输出</span></span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">cout</span>&lt;&lt;<span class="string">"NO"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="全代码"><a href="#全代码" class="headerlink" title="全代码"></a>全代码</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Stack</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span>* p;</span><br><span class="line">    <span class="keyword">int</span> <span class="built_in">max</span>;</span><br><span class="line">    <span class="keyword">int</span> topp;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Stack(<span class="keyword">int</span> N);</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">top</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">pop</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">in</span><span class="params">(<span class="keyword">int</span> a)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">empty</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">full</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">asset</span><span class="params">(<span class="keyword">int</span>* original,<span class="keyword">int</span>* target,Stack S)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span>* original,* target;</span><br><span class="line">    <span class="keyword">bool</span>* output;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> StackSize,SequenceLength,Lines;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;StackSize&gt;&gt;SequenceLength&gt;&gt;Lines;</span><br><span class="line"></span><br><span class="line">    original=(<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*(SequenceLength+<span class="number">1</span>));</span><br><span class="line">    target=(<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*(SequenceLength+<span class="number">1</span>));</span><br><span class="line">    output=(<span class="keyword">bool</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">bool</span>)*SequenceLength);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;SequenceLength;i++) *(original+i)=i+<span class="number">1</span>;        </span><br><span class="line">    *(original+SequenceLength)=<span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">Stack <span class="title">S</span><span class="params">(StackSize)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;Lines;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;SequenceLength;j++) <span class="built_in">cin</span>&gt;&gt;*(target+j);   </span><br><span class="line">        *(target+SequenceLength)=<span class="number">-1</span>;</span><br><span class="line">        *(output+i)=asset(original,target,S);                    </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;Lines;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (*(output+i)==<span class="literal">true</span>)<span class="built_in">cout</span>&lt;&lt;<span class="string">"YES"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">cout</span>&lt;&lt;<span class="string">"NO"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">asset</span><span class="params">(<span class="keyword">int</span>* original,<span class="keyword">int</span>* target,Stack S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (S.empty())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (*original==<span class="number">-1</span>)<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                S.in(*original);</span><br><span class="line">                original++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (S.top()==*target)</span><br><span class="line">        &#123;</span><br><span class="line">            S.pop();</span><br><span class="line">            target++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (S.full())<span class="keyword">break</span>;</span><br><span class="line">            S.in(*original);</span><br><span class="line">            original++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (*original==<span class="number">-1</span>&amp;&amp;S.empty()) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line">Stack::Stack(<span class="keyword">int</span> N)</span><br><span class="line">&#123;</span><br><span class="line">    p=(<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*N);</span><br><span class="line">    <span class="built_in">max</span>=N;</span><br><span class="line">    topp=<span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Stack::top</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> *(p+topp);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Stack::pop</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    topp--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Stack::in</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    topp++;</span><br><span class="line">    *(p+topp)=a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Stack::empty</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (topp==<span class="number">-1</span>)<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Stack::full</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (topp==<span class="built_in">max</span><span class="number">-1</span>)<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>Computer Science 计算机科学</category>
-        <category>Data Structure 数据结构</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>古文观止-郑伯克段于鄢</title>
-    <url>/2020/06/23/guwenguanzhi1/</url>
-    <content><![CDATA[<h2 id="左传"><a href="#左传" class="headerlink" title="左传"></a>左传</h2><table>
-<thead>
-<tr>
-<th align="center">名称</th>
-<th align="center">作者</th>
-<th align="center">时间</th>
-<th align="center">内容</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">《左传》</td>
-<td align="center">左丘明</td>
-<td align="center">战国初年</td>
-<td align="center">战争</td>
-</tr>
-</tbody></table>
-<p><img src="/images/zuozhuan2.jpg" alt="1"><br>&emsp;&emsp;《左传》，相传为左丘明著。原名《左氏春秋》，汉代改称《春秋左氏传》，简称《左传》。它是<strong>中国古代第一部叙事完备的编年体史书</strong>，更是先秦散文著作的代表，它标志着我国叙事散文的成熟。它与《公羊传》、《谷梁传》合称“春秋三传”。</p>
-<a id="more"></a>
-<p>&emsp;&emsp;《左传》作为一部<strong>史书</strong>记录了从鲁隐公元年（前 722）至鲁哀公二十七年（前 468）之间发生的史诗，记录了各国争霸的战争史。同时《左传》也是一部优秀的<strong>文学著作</strong>，其擅长描写战争、刻画人物，是中国古代散文发展到了一个新的高度，《左传》被认为是中国古代散文的一大源头。</p>
-<h2 id="郑伯克段于鄢"><a href="#郑伯克段于鄢" class="headerlink" title="郑伯克段于鄢"></a>郑伯克段于鄢</h2><p><img src="/images/%E5%B7%A6%E4%BC%A01.jpg" alt="1"></p>
-<h4 id="原文："><a href="#原文：" class="headerlink" title="原文："></a>原文：</h4><blockquote>
-<p>&emsp;&emsp;初，郑武公娶于申，曰武姜。生庄公及共叔段。庄公寤生，惊姜氏，故名曰“寤生”，遂恶之。爱共叔段，欲立之，亟请于武公，公弗许。及庄公即位，为之请制。公曰：“制，岩邑也，虢叔死焉，佗邑唯命。”请京，使居之，谓之“京城大叔”。<br>&emsp;&emsp;祭仲曰：“都，城过百雉，国之害也。先王之制：大都，不过参国之一；中，五之一；小，九之一。今京不度，非制也，君将不堪。”公曰：“姜氏欲之，焉辟害？”对曰：“姜氏何厌之有？不如早为之所，无使滋蔓。蔓，难图也。蔓草犹不可除，况君之宠弟乎？”公曰：“多行不义，必自毙，子姑待之。”<br>&emsp;&emsp;既而大叔命西鄙、北鄙贰于己。公子吕曰：“国不堪贰，君将若之何？欲与大叔，臣请事之；若弗与，则请除之，无生民心。”公曰：“无庸，将自及。”大叔又收贰以为己邑，至于廪延。子封曰：“可矣。厚将得众。”公曰：“不义不昵，厚将崩。”<br>&emsp;&emsp;大叔完聚，缮甲兵，具卒乘，将袭郑。夫人将启之。公闻其期，曰：“可矣！”命子封帅车二百乘以伐京。京叛大叔段。段入于鄢“。公伐诸鄢。五月辛丑，大叔出奔共。<br>&emsp;&emsp;遂置姜氏于城颍，而誓之日：“不及黄泉，无相见也。”既而悔之。<br>&emsp;&emsp;颍考叔为颍谷封人，闻之，有献于公。公赐之食。食舍肉。公问之，对曰：“小人有母，皆尝小人之食矣，未尝君之羹。请以遗之。”公曰：“尔有母遗，繄我独无！”颖考叔曰：“敢问何谓也？”公语之故，且告之悔。对曰：“君何患焉？若阙地及泉，隧而相见，其谁曰不然？”公从之。公入而赋：“大隧之中，其乐也融融！”姜出而赋：“大隧之外，其乐也泄泄！”遂为母子如初。<br>&emsp;&emsp;君子曰：“颖考叔，纯孝也。爱其母，施及庄公。《诗》曰：‘孝子不匮，永锡尔类。’其是之谓乎？”</p>
-</blockquote>
-<h4 id="注释："><a href="#注释：" class="headerlink" title="注释："></a>注释：</h4><ul>
-<li>寤生：生产时婴儿脚先出来  </li>
-<li>亟：多次、屡次  </li>
-<li>岩邑：险要的城邑  </li>
-<li>毙：倒下  </li>
-<li>崩：山陵崩塌，这里指垮台  </li>
-<li>融融、泄泄：形容快乐的样子  </li>
-</ul>
-<h4 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h4><p>&emsp;&emsp;郑武公娶了武姜，生了两个孩子，哥哥是庄公，弟弟是共段叔。因为庄公出生时脚先出来，于是姜氏十分嫌恶他。等到庄公即位之后，姜氏为共段叔请求领地，于是庄公便把京给了共段叔作为他的领地。得到领地之后，姜氏和共段叔并没有满足，他们聚集兵力、修缮城墙企图进攻郑庄公。郑庄公知道这件事情之后，很多大夫都劝他先下手，如果任由其发展将来就很难对付了。郑庄公却不这么认为，他说没有正义，得不到拥护，实力再雄厚最终也会垮台。果然，共段叔打算偷袭庄公，姜氏也偷偷打开城门让共段叔进攻，但是没想到京邑人反叛，共段叔不得不逃到了共邑躲了起来。</p>
-<p><img src="/images/zuozhuan3.jpg" alt="1"><br>&emsp;&emsp;郑庄公十分生气，于是把姜氏安置到了城颖，并且发誓不到黄泉绝不相见，但是他说完不就便后悔了。颍考叔听闻这件事，便向庄公献礼，庄公宴请他，吃饭时，颍考叔把肉留在一旁，庄公十分好奇他为什么这么做，于是颍考叔说他的母亲还没有尝过这样的肉羹，他要留给他的母亲。庄公听了他的一番话之后十分感动，但是哀叹道他已经没有母亲可以侍奉了。颍考叔告诉了郑庄公一个方法，从地上一直往下挖，一直挖到泉水，你们母子在所挖的隧道中相见，那么谁又能说不是呢？最终庄公与姜氏在隧道中相见，他们的关系又恢复了。</p>
-]]></content>
-      <categories>
-        <category>Reading Notes 读书笔记</category>
-        <category>古文观止</category>
-        <category>左传</category>
+        <category>Questions 编程题</category>
       </categories>
   </entry>
   <entry>
@@ -368,6 +325,69 @@
       <categories>
         <category>其他</category>
         <category>大一下考试资料</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Data Structure-Introduction 简介</title>
+    <url>/2020/06/22/DataStructure1/</url>
+    <content><![CDATA[<h2 id="什么是数据结构"><a href="#什么是数据结构" class="headerlink" title="什么是数据结构"></a>什么是数据结构</h2><p>&emsp;&emsp;在计算机科学中，<strong>数据结构</strong>（Data Structure）是计算机中存储、组织数据的方式。它研究的是数据的<strong>逻辑结构</strong>和数据的<strong>物理结构</strong>以及它们之间的相互关系，并对这种结构定义相适应的运算，设计出相应的算法，并确保经过这些运算以后所得到的新结构仍保持原来的结构类型。</p>
+<a id="more"></a>
+<h2 id="常用数据结构"><a href="#常用数据结构" class="headerlink" title="常用数据结构"></a>常用数据结构</h2><ul>
+<li>数组（Arry）</li>
+<li>队列（Queue）</li>
+<li>链表（Linked List）</li>
+<li>栈（Stack）</li>
+<li>树（Tree）</li>
+<li>图（Graph）</li>
+<li>堆（Heap）</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Computer Science 计算机科学</category>
+        <category>Data Structure 数据结构</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>古文观止-郑伯克段于鄢</title>
+    <url>/2020/06/23/guwenguanzhi1/</url>
+    <content><![CDATA[<h2 id="左传"><a href="#左传" class="headerlink" title="左传"></a>左传</h2><table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">作者</th>
+<th align="center">时间</th>
+<th align="center">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">《左传》</td>
+<td align="center">左丘明</td>
+<td align="center">战国初年</td>
+<td align="center">战争</td>
+</tr>
+</tbody></table>
+<p><img src="/images/zuozhuan2.jpg" alt="1"><br>&emsp;&emsp;《左传》，相传为左丘明著。原名《左氏春秋》，汉代改称《春秋左氏传》，简称《左传》。它是<strong>中国古代第一部叙事完备的编年体史书</strong>，更是先秦散文著作的代表，它标志着我国叙事散文的成熟。它与《公羊传》、《谷梁传》合称“春秋三传”。</p>
+<a id="more"></a>
+<p>&emsp;&emsp;《左传》作为一部<strong>史书</strong>记录了从鲁隐公元年（前 722）至鲁哀公二十七年（前 468）之间发生的史诗，记录了各国争霸的战争史。同时《左传》也是一部优秀的<strong>文学著作</strong>，其擅长描写战争、刻画人物，是中国古代散文发展到了一个新的高度，《左传》被认为是中国古代散文的一大源头。</p>
+<h2 id="郑伯克段于鄢"><a href="#郑伯克段于鄢" class="headerlink" title="郑伯克段于鄢"></a>郑伯克段于鄢</h2><p><img src="/images/%E5%B7%A6%E4%BC%A01.jpg" alt="1"></p>
+<h4 id="原文："><a href="#原文：" class="headerlink" title="原文："></a>原文：</h4><blockquote>
+<p>&emsp;&emsp;初，郑武公娶于申，曰武姜。生庄公及共叔段。庄公寤生，惊姜氏，故名曰“寤生”，遂恶之。爱共叔段，欲立之，亟请于武公，公弗许。及庄公即位，为之请制。公曰：“制，岩邑也，虢叔死焉，佗邑唯命。”请京，使居之，谓之“京城大叔”。<br>&emsp;&emsp;祭仲曰：“都，城过百雉，国之害也。先王之制：大都，不过参国之一；中，五之一；小，九之一。今京不度，非制也，君将不堪。”公曰：“姜氏欲之，焉辟害？”对曰：“姜氏何厌之有？不如早为之所，无使滋蔓。蔓，难图也。蔓草犹不可除，况君之宠弟乎？”公曰：“多行不义，必自毙，子姑待之。”<br>&emsp;&emsp;既而大叔命西鄙、北鄙贰于己。公子吕曰：“国不堪贰，君将若之何？欲与大叔，臣请事之；若弗与，则请除之，无生民心。”公曰：“无庸，将自及。”大叔又收贰以为己邑，至于廪延。子封曰：“可矣。厚将得众。”公曰：“不义不昵，厚将崩。”<br>&emsp;&emsp;大叔完聚，缮甲兵，具卒乘，将袭郑。夫人将启之。公闻其期，曰：“可矣！”命子封帅车二百乘以伐京。京叛大叔段。段入于鄢“。公伐诸鄢。五月辛丑，大叔出奔共。<br>&emsp;&emsp;遂置姜氏于城颍，而誓之日：“不及黄泉，无相见也。”既而悔之。<br>&emsp;&emsp;颍考叔为颍谷封人，闻之，有献于公。公赐之食。食舍肉。公问之，对曰：“小人有母，皆尝小人之食矣，未尝君之羹。请以遗之。”公曰：“尔有母遗，繄我独无！”颖考叔曰：“敢问何谓也？”公语之故，且告之悔。对曰：“君何患焉？若阙地及泉，隧而相见，其谁曰不然？”公从之。公入而赋：“大隧之中，其乐也融融！”姜出而赋：“大隧之外，其乐也泄泄！”遂为母子如初。<br>&emsp;&emsp;君子曰：“颖考叔，纯孝也。爱其母，施及庄公。《诗》曰：‘孝子不匮，永锡尔类。’其是之谓乎？”</p>
+</blockquote>
+<h4 id="注释："><a href="#注释：" class="headerlink" title="注释："></a>注释：</h4><ul>
+<li>寤生：生产时婴儿脚先出来  </li>
+<li>亟：多次、屡次  </li>
+<li>岩邑：险要的城邑  </li>
+<li>毙：倒下  </li>
+<li>崩：山陵崩塌，这里指垮台  </li>
+<li>融融、泄泄：形容快乐的样子  </li>
+</ul>
+<h4 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h4><p>&emsp;&emsp;郑武公娶了武姜，生了两个孩子，哥哥是庄公，弟弟是共段叔。因为庄公出生时脚先出来，于是姜氏十分嫌恶他。等到庄公即位之后，姜氏为共段叔请求领地，于是庄公便把京给了共段叔作为他的领地。得到领地之后，姜氏和共段叔并没有满足，他们聚集兵力、修缮城墙企图进攻郑庄公。郑庄公知道这件事情之后，很多大夫都劝他先下手，如果任由其发展将来就很难对付了。郑庄公却不这么认为，他说没有正义，得不到拥护，实力再雄厚最终也会垮台。果然，共段叔打算偷袭庄公，姜氏也偷偷打开城门让共段叔进攻，但是没想到京邑人反叛，共段叔不得不逃到了共邑躲了起来。</p>
+<p><img src="/images/zuozhuan3.jpg" alt="1"><br>&emsp;&emsp;郑庄公十分生气，于是把姜氏安置到了城颖，并且发誓不到黄泉绝不相见，但是他说完不就便后悔了。颍考叔听闻这件事，便向庄公献礼，庄公宴请他，吃饭时，颍考叔把肉留在一旁，庄公十分好奇他为什么这么做，于是颍考叔说他的母亲还没有尝过这样的肉羹，他要留给他的母亲。庄公听了他的一番话之后十分感动，但是哀叹道他已经没有母亲可以侍奉了。颍考叔告诉了郑庄公一个方法，从地上一直往下挖，一直挖到泉水，你们母子在所挖的隧道中相见，那么谁又能说不是呢？最终庄公与姜氏在隧道中相见，他们的关系又恢复了。</p>
+]]></content>
+      <categories>
+        <category>Reading Notes 读书笔记</category>
+        <category>古文观止</category>
+        <category>左传</category>
       </categories>
   </entry>
 </search>
