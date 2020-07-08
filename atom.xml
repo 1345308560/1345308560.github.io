@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://1345308560.github.io/"/>
-  <updated>2020-06-26T05:57:00.176Z</updated>
+  <updated>2020-07-08T14:59:35.075Z</updated>
   <id>https://1345308560.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>编程题2</title>
+    <link href="https://1345308560.github.io/2020/07/08/%E7%BC%96%E7%A8%8B2/"/>
+    <id>https://1345308560.github.io/2020/07/08/%E7%BC%96%E7%A8%8B2/</id>
+    <published>2020-07-08T14:50:22.000Z</published>
+    <updated>2020-07-08T14:59:35.075Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;题目来源&quot;&gt;&lt;a href=&quot;#题目来源&quot; class=&quot;headerlink&quot; title=&quot;题目来源&quot;&gt;&lt;/a&gt;题目来源&lt;/h2&gt;&lt;p&gt;MOOC练习题&lt;/p&gt;
+&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;给定两棵树T1和T2。如果T1可以通过若干次左右孩子互换就变成T2，则我们称两棵树是“同构”的。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Computer Science 计算机科学" scheme="https://1345308560.github.io/categories/Computer-Science-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/"/>
+    
+      <category term="Questions 编程题" scheme="https://1345308560.github.io/categories/Computer-Science-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/Questions-%E7%BC%96%E7%A8%8B%E9%A2%98/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>编程题1</title>
