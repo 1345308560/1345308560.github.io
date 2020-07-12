@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://1345308560.github.io/"/>
-  <updated>2020-07-08T14:59:35.075Z</updated>
+  <updated>2020-07-12T04:44:00.900Z</updated>
   <id>https://1345308560.github.io/</id>
   
   <author>
@@ -17,9 +17,31 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>编程题3</title>
+    <link href="https://1345308560.github.io/2020/07/12/%E7%BC%96%E7%A8%8B%E9%A2%983/"/>
+    <id>https://1345308560.github.io/2020/07/12/%E7%BC%96%E7%A8%8B%E9%A2%983/</id>
+    <published>2020-07-12T04:12:22.000Z</published>
+    <updated>2020-07-12T04:44:00.900Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;题目来源&quot;&gt;&lt;a href=&quot;#题目来源&quot; class=&quot;headerlink&quot; title=&quot;题目来源&quot;&gt;&lt;/a&gt;题目来源&lt;/h2&gt;&lt;p&gt;MOOC练习题&lt;/p&gt;
+&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;给定一个插入序列就可以唯一确定一棵二叉搜索树。然而，一棵给定的二叉搜索树却可以由多种不同的插入序列得到。例如分别按照序列{2, 1, 3}和{2, 3, 1}插入初始为空的二叉搜索树，都得到一样的结果。于是对于输入的各种插入序列，你需要判断它们是否能生成一样的二叉搜索树。  &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Computer Science 计算机科学" scheme="https://1345308560.github.io/categories/Computer-Science-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/"/>
+    
+      <category term="Questions 编程题" scheme="https://1345308560.github.io/categories/Computer-Science-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/Questions-%E7%BC%96%E7%A8%8B%E9%A2%98/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>编程题2</title>
-    <link href="https://1345308560.github.io/2020/07/08/%E7%BC%96%E7%A8%8B2/"/>
-    <id>https://1345308560.github.io/2020/07/08/%E7%BC%96%E7%A8%8B2/</id>
+    <link href="https://1345308560.github.io/2020/07/08/%E7%BC%96%E7%A8%8B%E9%A2%982/"/>
+    <id>https://1345308560.github.io/2020/07/08/%E7%BC%96%E7%A8%8B%E9%A2%982/</id>
     <published>2020-07-08T14:50:22.000Z</published>
     <updated>2020-07-08T14:59:35.075Z</updated>
     
