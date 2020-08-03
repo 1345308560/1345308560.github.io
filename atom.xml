@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://1345308560.github.io/"/>
-  <updated>2020-08-01T07:49:20.441Z</updated>
+  <updated>2020-08-03T06:59:35.516Z</updated>
   <id>https://1345308560.github.io/</id>
   
   <author>
@@ -17,16 +17,16 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>编程题4</title>
-    <link href="https://1345308560.github.io/2020/08/01/%E7%BC%96%E7%A8%8B%E9%A2%984/"/>
-    <id>https://1345308560.github.io/2020/08/01/%E7%BC%96%E7%A8%8B%E9%A2%984/</id>
-    <published>2020-08-01T07:41:05.000Z</published>
-    <updated>2020-08-01T07:49:20.441Z</updated>
+    <title>编程题5</title>
+    <link href="https://1345308560.github.io/2020/08/03/%E7%BC%96%E7%A8%8B%E9%A2%985/"/>
+    <id>https://1345308560.github.io/2020/08/03/%E7%BC%96%E7%A8%8B%E9%A2%985/</id>
+    <published>2020-08-03T06:52:26.000Z</published>
+    <updated>2020-08-03T06:59:35.516Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;题目来源&quot;&gt;&lt;a href=&quot;#题目来源&quot; class=&quot;headerlink&quot; title=&quot;题目来源&quot;&gt;&lt;/a&gt;题目来源&lt;/h2&gt;&lt;p&gt;MOOC练习题&lt;/p&gt;
-&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;将一系列给定数字插入一个初始为空的小顶堆H[]。随后对任意给定的下标i，打印从H[i]到根结点的路径。&lt;/p&gt;
+      &lt;h2 id=&quot;题目来源&quot;&gt;&lt;a href=&quot;#题目来源&quot; class=&quot;headerlink&quot; title=&quot;题目来源&quot;&gt;&lt;/a&gt;题目来源&lt;/h2&gt;&lt;p&gt;2005、2007年浙江大学计算机学院免试研究生上机考试题改编&lt;/p&gt;
+&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;We have a network of computers and a list of bi-directional connections. Each of these connections allows a file transfer from one computer to another. Is it possible to send a file from any computer on the network to any other?&lt;/p&gt;
     
     </summary>
     
@@ -39,28 +39,23 @@
   </entry>
   
   <entry>
-    <title>Diary4</title>
-    <link href="https://1345308560.github.io/2020/07/16/Diary4/"/>
-    <id>https://1345308560.github.io/2020/07/16/Diary4/</id>
-    <published>2020-07-16T11:51:30.000Z</published>
-    <updated>2020-07-16T12:25:34.243Z</updated>
+    <title>编程题4</title>
+    <link href="https://1345308560.github.io/2020/08/01/%E7%BC%96%E7%A8%8B%E9%A2%984/"/>
+    <id>https://1345308560.github.io/2020/08/01/%E7%BC%96%E7%A8%8B%E9%A2%984/</id>
+    <published>2020-08-01T07:41:05.000Z</published>
+    <updated>2020-08-01T08:03:49.080Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;Be-kind&quot;&gt;&lt;a href=&quot;#Be-kind&quot; class=&quot;headerlink&quot; title=&quot;Be kind&quot;&gt;&lt;/a&gt;Be
-        
-      
+      &lt;h2 id=&quot;题目来源&quot;&gt;&lt;a href=&quot;#题目来源&quot; class=&quot;headerlink&quot; title=&quot;题目来源&quot;&gt;&lt;/a&gt;题目来源&lt;/h2&gt;&lt;p&gt;MOOC练习题&lt;/p&gt;
+&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;将一系列给定数字插入一个初始为空的小顶堆H[]。随后对任意给定的下标i，打印从H[i]到根结点的路径。&lt;/p&gt;
     
     </summary>
     
     
-      <category term="其他" scheme="https://1345308560.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+      <category term="Computer Science 计算机科学" scheme="https://1345308560.github.io/categories/Computer-Science-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/"/>
     
-      <category term="Diary" scheme="https://1345308560.github.io/categories/%E5%85%B6%E4%BB%96/Diary/"/>
+      <category term="Questions 编程题" scheme="https://1345308560.github.io/categories/Computer-Science-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/Questions-%E7%BC%96%E7%A8%8B%E9%A2%98/"/>
     
     
   </entry>
